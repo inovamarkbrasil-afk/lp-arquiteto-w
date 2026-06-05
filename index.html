@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Washington Machado · Arquitetura, Interiores & Paisagismo</title>
+  <meta name="description" content="Arquiteto Washington Machado — projetos residenciais de alto padrão, interiores, paisagismo e urbanismo. Espaços que contam a sua história. Faça um orçamento pelo WhatsApp." />
+  <meta name="author" content="Washington Machado" />
+
+  <!-- Open Graph / redes sociais -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Washington Machado · Arquitetura, Interiores & Paisagismo" />
+  <meta property="og:description" content="Do projeto ao detalhe, cada ambiente é pensado para refletir quem você é — com técnica, estética e propósito." />
+  <meta property="og:image" content="assets/vitalia-1.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cursor personalizado (desktop) -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- ============ HEADER FIXO ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#top" class="logo" aria-label="Washington Machado — início">Washington Machado</a>
+      <!-- SUBSTITUIR: número WhatsApp -->
+      <a href="https://wa.me/5500000000000" class="btn-ghost" target="_blank" rel="noopener" aria-label="Solicitar orçamento pelo WhatsApp">Orçamento</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <!-- SUBSTITUIR: src do vídeo hero -->
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/vitalia-1.png">
+        <source src="assets/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow hero-tag">✦ Arquitetura · Interiores · Paisagismo</p>
+
+        <h1 class="hero-title">
+          <span class="line"><span>Espaços que contam</span></span>
+          <span class="line"><span>a sua história.</span></span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Do projeto ao detalhe, cada ambiente é pensado para refletir
+          quem você é. Com técnica, estética e propósito.
+        </p>
+
+        <!-- SUBSTITUIR: número WhatsApp -->
+        <a href="https://wa.me/5500000000000" class="btn-cta hero-cta" target="_blank" rel="noopener" aria-label="Solicitar orçamento do meu projeto pelo WhatsApp">
+          <img src="icon-wpp.svg" alt="" class="btn-wpp-icon" aria-hidden="true" />
+          Quero fazer um orçamento do meu projeto
+        </a>
+      </div>
+
+      <a href="#projetos" class="scroll-indicator" aria-label="Rolar para projetos">
+        <span class="scroll-line"><span></span></span>
+        <span class="scroll-label">projetos</span>
+      </a>
+    </section>
+
+    <!-- ============ PROJETOS / CARROSSÉIS ============ -->
+    <section class="projects" id="projetos">
+      <div class="section-head reveal">
+        <p class="eyebrow">✦ portfólio selecionado</p>
+        <h2 class="section-title">Projetos</h2>
+        <span class="line-grow" aria-hidden="true"></span>
+      </div>
+
+      <!-- Carrossel 1 — esquerda -->
+      <p class="marquee-label reveal">Projeto: Vitalia</p>
+      <div class="marquee reveal" data-project="Projeto Vitália">
+        <div class="marquee-track marquee-left">
+          <figure class="slide"><img src="assets/vitalia-1.png" alt="Projeto Vitália — ambiente 1" loading="lazy" /><figcaption>Projeto Vitália</figcaption></figure>
+          <figure class="slide"><img src="assets/vitalia-2.png" alt="Projeto Vitália — ambiente 2" loading="lazy" /><figcaption>Projeto Vitália</figcaption></figure>
+          <figure class="slide"><img src="assets/vitalia-3.png" alt="Projeto Vitália — ambiente 3" loading="lazy" /><figcaption>Projeto Vitália</figcaption></figure>
+          <figure class="slide"><img src="assets/vitalia-4.png" alt="Projeto Vitália — ambiente 4" loading="lazy" /><figcaption>Projeto Vitália</figcaption></figure>
+          <!-- clones para loop infinito -->
+          <figure class="slide" aria-hidden="true"><img src="assets/vitalia-1.png" alt="" loading="lazy" /><figcaption>Projeto Vitália</figcaption></figure>
+          <figure class="slide" aria-hidden="true"><img src="assets/vitalia-2.png" alt="" loading="lazy" /><figcaption>Projeto Vitália</figcaption></figure>
+          <figure class="slide" aria-hidden="true"><img src="assets/vitalia-3.png" alt="" loading="lazy" /><figcaption>Projeto Vitália</figcaption></figure>
+          <figure class="slide" aria-hidden="true"><img src="assets/vitalia-4.png" alt="" loading="lazy" /><figcaption>Projeto Vitália</figcaption></figure>
+        </div>
+      </div>
+
+      <!-- Carrossel 2 — direita -->
+      <p class="marquee-label reveal">Projeto: Espaço Menina</p>
+      <div class="marquee reveal" data-project="Espaço Menina">
+        <div class="marquee-track marquee-right">
+          <figure class="slide"><img src="assets/em-1.png" alt="Espaço Menina — ambiente 1" loading="lazy" /><figcaption>Espaço Menina</figcaption></figure>
+          <figure class="slide"><img src="assets/em-2.png" alt="Espaço Menina — ambiente 2" loading="lazy" /><figcaption>Espaço Menina</figcaption></figure>
+          <figure class="slide"><img src="assets/em-3.png" alt="Espaço Menina — ambiente 3" loading="lazy" /><figcaption>Espaço Menina</figcaption></figure>
+          <figure class="slide"><img src="assets/em-4.png" alt="Espaço Menina — ambiente 4" loading="lazy" /><figcaption>Espaço Menina</figcaption></figure>
+          <!-- clones para loop infinito -->
+          <figure class="slide" aria-hidden="true"><img src="assets/em-1.png" alt="" loading="lazy" /><figcaption>Espaço Menina</figcaption></figure>
+          <figure class="slide" aria-hidden="true"><img src="assets/em-2.png" alt="" loading="lazy" /><figcaption>Espaço Menina</figcaption></figure>
+          <figure class="slide" aria-hidden="true"><img src="assets/em-3.png" alt="" loading="lazy" /><figcaption>Espaço Menina</figcaption></figure>
+          <figure class="slide" aria-hidden="true"><img src="assets/em-4.png" alt="" loading="lazy" /><figcaption>Espaço Menina</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="projects-cta reveal">
+        <!-- SUBSTITUIR: número WhatsApp -->
+        <a href="https://wa.me/5500000000000" class="btn-cta" target="_blank" rel="noopener" aria-label="Ver como pode ficar o seu projeto — falar pelo WhatsApp">
+          <img src="icon-wpp.svg" alt="" class="btn-wpp-icon" aria-hidden="true" />
+          Veja como pode ficar o seu projeto
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="about" id="sobre">
+      <div class="about-inner">
+        <div class="about-text reveal">
+          <p class="eyebrow">✦ sobre o arquiteto</p>
+          <h2 class="section-title">Washington Machado</h2>
+          <p class="about-paragraph">
+            Washington Machado é arquiteto com atuação em projetos residenciais
+            de alto padrão, interiores, paisagismo e urbanismo. Com olhar atento
+            ao detalhe e escuta ativa ao cliente, transforma espaços em
+            experiências únicas. Alinhando técnica, estética e identidade.
+          </p>
+
+          <ul class="about-services">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 11.5 12 4l9 7.5" /><path d="M5 10v9h14v-9" /><path d="M10 19v-5h4v5" />
+              </svg>
+              <span>Arquitetura Residencial</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 12V9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3" /><path d="M3 12a2 2 0 0 1 2 2v3h14v-3a2 2 0 0 1 2-2" /><path d="M5 17v2" /><path d="M19 17v2" />
+              </svg>
+              <span>Interiores</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 21c0-6 0-9 6-13-1 7-3 9-6 9" /><path d="M12 21c0-5-1-7-5-10 1 6 2 8 5 8" /><path d="M12 21v-7" />
+              </svg>
+              <span>Paisagismo</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="about-photo reveal">
+          <div class="about-photo-frame">
+            <img src="assets/arquiteto.png" alt="Retrato do arquiteto Washington Machado" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="final-cta" id="contato">
+      <div class="final-cta-inner reveal">
+        <h2 class="final-cta-title">
+          Pronto para transformar<br />o seu espaço?
+        </h2>
+        <p class="final-cta-subtitle">
+          Entre em contato e receba uma consultoria inicial gratuita.
+        </p>
+
+        <!-- SUBSTITUIR: número WhatsApp -->
+        <a href="https://wa.me/5500000000000" class="btn-cta" target="_blank" rel="noopener" aria-label="Falar com o arquiteto pelo WhatsApp">
+          <img src="icon-wpp.svg" alt="" class="btn-wpp-icon" aria-hidden="true" />
+          Quero fazer um orçamento do meu projeto
+        </a>
+
+        <p class="final-cta-note">Atendimento pelo WhatsApp · Resposta rápida</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <p>© 2025 Washington Machado Arquitetura · Todos os direitos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
