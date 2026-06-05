@@ -3,8 +3,12 @@
    style.css — mobile-first, premium editorial
    ===================================================================== */
 
+/* Fonte principal (títulos): Glacial Indifference — via cdnfonts (não está no Google Fonts) */
+@import url('https://fonts.cdnfonts.com/css/glacial-indifference-2');
+/* Subtítulos / textos: Pathway Gothic One — Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+/* Inter mantida como fallback de corpo */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 
 /* Basier Circle — usar se o arquivo estiver disponível na pasta /fonts.
    Caso contrário, o fallback "DM Serif Display" / Georgia assume.
@@ -34,8 +38,8 @@
   --color-cta-bg: #C8A97E;
   --color-cta-text: #0D0D0D;
 
-  --font-display: "Basier Circle", "DM Serif Display", Georgia, serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Glacial Indifference", "Inter", system-ui, sans-serif;
+  --font-body: "Pathway Gothic One", "Inter", system-ui, -apple-system, sans-serif;
 
   --maxw: 1280px;
   --pad-x: 24px;
@@ -193,6 +197,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   text-transform: uppercase;
   color: var(--color-text-primary);
 }
+.header-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
 .header-inner .btn-ghost {
   padding: 7px 14px;
   font-size: 10px;
@@ -287,7 +296,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* Scroll indicator */
 .scroll-indicator {
   position: absolute;
-  bottom: 30px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -295,8 +304,13 @@ ul { margin: 0; padding: 0; list-style: none; }
   align-items: center;
   gap: 10px;
   opacity: 0;
-  animation: fade-up 0.9s var(--ease-out) 1.4s forwards;
+  animation: fade-up-center 0.9s var(--ease-out) 1.4s forwards;
   transition: opacity 0.5s ease;
+}
+/* Mantém o translateX(-50%) durante o fade-in para não perder o centramento */
+@keyframes fade-up-center {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 .scroll-indicator.hidden { opacity: 0 !important; pointer-events: none; }
 .scroll-line {
