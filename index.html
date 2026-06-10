@@ -30,8 +30,16 @@
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <a href="#top" class="logo" aria-label="Washington Machado — início"><img src="assets/logo-arquiteto.png" alt="Washington Machado Arquitetura" class="header-logo"></a>
-      <!-- SUBSTITUIR: número WhatsApp -->
-      <a href="https://wa.me/5500000000000" class="btn-ghost" target="_blank" rel="noopener" aria-label="Solicitar orçamento pelo WhatsApp">Orçamento</a>
+      <div class="header-actions">
+        <a href="https://www.instagram.com/arqwashingtonmachado?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn-ig" target="_blank" rel="noopener" aria-label="Instagram do arquiteto Washington Machado">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none" />
+          </svg>
+          <span>Instagram</span>
+        </a>
+        <!-- SUBSTITUIR: número WhatsApp -->
+        <a href="https://wa.me/5500000000000" class="btn-ghost" target="_blank" rel="noopener" aria-label="Solicitar orçamento pelo WhatsApp">Orçamento</a>
+      </div>
     </div>
   </header>
 
@@ -39,18 +47,21 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero" id="hero">
-      <!-- SUBSTITUIR: src do vídeo hero -->
-      <video class="hero-video" autoplay muted loop playsinline poster="assets/vitalia-1.png">
-        <source src="assets/hero.mp4" type="video/mp4" />
-      </video>
+      <picture class="hero-bg" aria-hidden="true">
+        <source media="(max-width: 719px)" srcset="assets/background-mobile.png" />
+        <source media="(min-width: 720px)" srcset="assets/background-hero.png" />
+        <img class="hero-bg-img" src="assets/background-hero.png" alt="" />
+      </picture>
       <div class="hero-overlay" aria-hidden="true"></div>
 
       <div class="hero-content">
+        <img src="assets/logo-arquiteto.png" alt="Washington Machado Arquitetura" class="hero-logo" />
+
         <p class="eyebrow hero-tag">✦ Arquitetura · Interiores · Paisagismo</p>
 
         <h1 class="hero-title">
-          <span class="line"><span>Espaços que contam</span></span>
-          <span class="line"><span>a sua história.</span></span>
+          <span class="line"><span>Espaços que revelam</span></span>
+          <span class="line"><span>histórias.</span></span>
         </h1>
 
         <p class="hero-subtitle">
@@ -111,6 +122,22 @@
         </div>
       </div>
 
+      <!-- Carrossel 3 — esquerda (direita → esquerda) -->
+      <p class="marquee-label reveal">Projeto: Casa Luz</p>
+      <div class="marquee reveal" data-project="Casa Luz">
+        <div class="marquee-track marquee-left">
+          <figure class="slide"><img src="assets/casa-1.png" alt="Casa Luz — ambiente 1" loading="lazy" /><figcaption>Casa Luz</figcaption></figure>
+          <figure class="slide"><img src="assets/casa-2.png" alt="Casa Luz — ambiente 2" loading="lazy" /><figcaption>Casa Luz</figcaption></figure>
+          <figure class="slide"><img src="assets/casa-3.png" alt="Casa Luz — ambiente 3" loading="lazy" /><figcaption>Casa Luz</figcaption></figure>
+          <figure class="slide"><img src="assets/casa-4.png" alt="Casa Luz — ambiente 4" loading="lazy" /><figcaption>Casa Luz</figcaption></figure>
+          <!-- clones para loop infinito -->
+          <figure class="slide" aria-hidden="true"><img src="assets/casa-1.png" alt="" loading="lazy" /><figcaption>Casa Luz</figcaption></figure>
+          <figure class="slide" aria-hidden="true"><img src="assets/casa-2.png" alt="" loading="lazy" /><figcaption>Casa Luz</figcaption></figure>
+          <figure class="slide" aria-hidden="true"><img src="assets/casa-3.png" alt="" loading="lazy" /><figcaption>Casa Luz</figcaption></figure>
+          <figure class="slide" aria-hidden="true"><img src="assets/casa-4.png" alt="" loading="lazy" /><figcaption>Casa Luz</figcaption></figure>
+        </div>
+      </div>
+
       <div class="projects-cta reveal">
         <!-- SUBSTITUIR: número WhatsApp -->
         <a href="https://wa.me/5500000000000" class="btn-cta" target="_blank" rel="noopener" aria-label="Ver como pode ficar o seu projeto — falar pelo WhatsApp">
@@ -126,11 +153,17 @@
         <div class="about-text reveal">
           <p class="eyebrow">✦ sobre o arquiteto</p>
           <h2 class="section-title">Washington Machado</h2>
+          <p class="about-lead">
+            Entre o traço e a matéria, existe uma linha invisível que dita a
+            emoção de um lugar.
+          </p>
           <p class="about-paragraph">
-            Washington Machado é arquiteto com atuação em projetos residenciais
-            de alto padrão, interiores, paisagismo e urbanismo. Com olhar atento
-            ao detalhe e escuta ativa ao cliente, transforma espaços em
-            experiências únicas. Alinhando técnica, estética e identidade.
+            Meu nome é Washington Machado, e a arquitetura que assino alinha a
+            precisão geométrica à poesia visual, moldando a luz e a matéria,
+            transformando o concreto e o espaço em memórias de um manifesto
+            único de exclusividade e sofisticação. Minha missão é traduzir a
+            identidade humana e o olhar sensível através de projetos residenciais
+            e comerciais de alto padrão, interiores e o design da própria natureza.
           </p>
 
           <ul class="about-services">
@@ -157,7 +190,7 @@
 
         <div class="about-photo reveal">
           <div class="about-photo-frame">
-            <img src="assets/arquiteto.png" alt="Retrato do arquiteto Washington Machado" loading="lazy" />
+            <img src="assets/arquiteto.JPG" alt="Retrato do arquiteto Washington Machado" loading="lazy" />
           </div>
         </div>
       </div>
@@ -170,14 +203,23 @@
           Pronto para transformar<br />o seu espaço?
         </h2>
         <p class="final-cta-subtitle">
-          Entre em contato e receba uma consultoria inicial gratuita.
+          Inicie agora uma conversa e dê o primeiro passo rumo a um projeto
+          sob medida para a sua história.
         </p>
 
-        <!-- SUBSTITUIR: número WhatsApp -->
-        <a href="https://wa.me/5500000000000" class="btn-cta" target="_blank" rel="noopener" aria-label="Falar com o arquiteto pelo WhatsApp">
-          <img src="icon-wpp.svg" alt="" class="btn-wpp-icon" aria-hidden="true" />
-          Quero fazer um orçamento do meu projeto
-        </a>
+        <div class="final-cta-actions">
+          <!-- SUBSTITUIR: número WhatsApp -->
+          <a href="https://wa.me/5500000000000" class="btn-cta" target="_blank" rel="noopener" aria-label="Falar com o arquiteto pelo WhatsApp">
+            <img src="icon-wpp.svg" alt="" class="btn-wpp-icon" aria-hidden="true" />
+            Quero fazer um orçamento do meu projeto
+          </a>
+          <a href="https://www.instagram.com/arqwashingtonmachado?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn-ghost btn-ghost--ig" target="_blank" rel="noopener" aria-label="Conhecer o trabalho no Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none" />
+            </svg>
+            Conheça meu trabalho no Instagram
+          </a>
+        </div>
 
         <p class="final-cta-note">Atendimento pelo WhatsApp · Resposta rápida</p>
       </div>

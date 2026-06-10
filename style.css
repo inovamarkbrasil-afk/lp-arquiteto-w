@@ -88,7 +88,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-family: var(--font-display);
   font-size: clamp(34px, 6vw, 64px);
   line-height: 1.05;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   color: var(--color-text-primary);
 }
 
@@ -139,6 +140,30 @@ ul { margin: 0; padding: 0; list-style: none; }
   0%, 100% { box-shadow: 0 0 0 0 rgba(200, 169, 126, 0.5); }
   50%       { box-shadow: 0 0 0 12px rgba(200, 169, 126, 0); }
 }
+
+/* Botão Instagram (header) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  transition: color 0.4s var(--ease-out), border-color 0.4s var(--ease-out);
+}
+.btn-ig svg { width: 16px; height: 16px; flex-shrink: 0; color: var(--color-accent); }
+.btn-ig:hover { color: var(--color-accent); border-color: var(--color-accent); }
 
 /* Botão ghost (header) */
 .btn-ghost {
@@ -219,13 +244,29 @@ ul { margin: 0; padding: 0; list-style: none; }
   padding: 120px var(--pad-x) 100px;
   overflow: hidden;
 }
-.hero-video {
+.hero-video,
+.hero-bg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -2;
+}
+.hero-bg { display: block; }
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Logo em destaque, centralizada acima da minifrase */
+.hero-logo {
+  width: clamp(150px, 22vw, 240px);
+  height: auto;
+  margin: 0 auto 26px;
+  opacity: 0;
+  animation: fade-up 0.9s var(--ease-out) 0.1s forwards;
 }
 .hero-overlay {
   position: absolute;
@@ -252,7 +293,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-family: var(--font-display);
   font-size: clamp(42px, 7vw, 88px);
   line-height: 1.05;
-  letter-spacing: 0.005em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   color: var(--color-text-primary);
   margin-bottom: 28px;
 }
@@ -447,8 +489,18 @@ ul { margin: 0; padding: 0; list-style: none; }
   gap: 48px;
   align-items: center;
 }
+.about-lead {
+  margin: 26px 0 18px;
+  max-width: 560px;
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2.2vw, 26px);
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
 .about-paragraph {
-  margin: 26px 0 38px;
+  margin: 0 0 38px;
   max-width: 560px;
   font-size: clamp(15px, 1.7vw, 18px);
   color: var(--color-text-secondary);
@@ -538,6 +590,20 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-weight: 300;
   font-size: clamp(15px, 2vw, 18px);
 }
+.final-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.btn-ghost--ig {
+  gap: 10px;
+  padding: 16px 24px;
+  font-size: 12px;
+  animation: none;
+}
+.btn-ghost--ig svg { width: 18px; height: 18px; flex-shrink: 0; }
 .final-cta-note {
   margin-top: 22px;
   font-size: 12px;
@@ -597,7 +663,14 @@ ul { margin: 0; padding: 0; list-style: none; }
    MEDIA QUERIES — mobile-first (min-width)
    ===================================================================== */
 
-/* Tablet em diante: header com logo à esquerda, CTA à direita */
+/* Telas pequenas: botão Instagram só com ícone para não estourar o header */
+@media (max-width: 560px) {
+  .btn-ig span { display: none; }
+  .btn-ig { padding: 8px 10px; }
+  .header-inner { gap: 10px; }
+}
+
+/* Tablet em diante: header com logo à esquerda, ações à direita */
 @media (min-width: 720px) {
   .header-inner { justify-content: space-between; }
   .logo { font-size: 16px; }
