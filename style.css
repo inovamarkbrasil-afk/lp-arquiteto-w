@@ -223,10 +223,13 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--color-text-primary);
 }
 .header-logo {
-  height: 48px;
+  height: 24px;
   width: auto;
   object-fit: contain;
+  opacity: 0.25;
+  transition: opacity 0.4s var(--ease-out);
 }
+.logo:hover .header-logo { opacity: 1; }
 .header-inner .btn-ghost {
   padding: 7px 14px;
   font-size: 10px;
