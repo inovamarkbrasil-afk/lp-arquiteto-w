@@ -148,41 +148,4 @@
       if (!document.hidden && heroVideo.paused) startPlayback();
     });
   }
-
-  /* ----------------------------------------------------------------
-     6. META PIXEL — dispara evento Lead ao clicar em qualquer CTA WhatsApp
-     Segura o redirecionamento ~700ms para garantir o envio do evento.
-  ---------------------------------------------------------------- */
-  const WA_SELECTOR =
-    'a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="web.whatsapp.com"]';
-
-  document.addEventListener('click', (e) => {
-    const link = e.target.closest(WA_SELECTOR);
-    if (!link) return;
-
-    // Evita disparar duas vezes caso o redirecionamento já tenha sido agendado.
-    if (link.dataset.leadFired === '1') return;
-
-    // Sem o pixel carregado (ex.: bloqueador), deixa o clique seguir normalmente.
-    if (typeof window.fbq !== 'function') return;
-
-    e.preventDefault();
-    link.dataset.leadFired = '1';
-
-    const href = link.href;
-    const target = link.target;
-
-    window.fbq('track', 'Lead', {
-      content_name: 'Clique no WhatsApp',
-      origem: 'landing_page'
-    });
-
-    setTimeout(() => {
-      if (target === '_blank') {
-        window.open(href, '_blank', 'noopener');
-      } else {
-        window.location.href = href;
-      }
-    }, 700);
-  });
 })();

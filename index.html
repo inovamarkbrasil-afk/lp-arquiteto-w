@@ -38,6 +38,37 @@
   src="https://www.facebook.com/tr?id=1022213440319656&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
+
+  <!-- Meta Pixel — evento Lead no clique de qualquer link WhatsApp -->
+  <script>
+  document.addEventListener("click", function(event) {
+    const link = event.target.closest("a");
+
+    if (!link) return;
+
+    const href = link.getAttribute("href") || "";
+
+    const isWhatsapp =
+      href.includes("wa.me") ||
+      href.includes("api.whatsapp.com") ||
+      href.includes("web.whatsapp.com");
+
+    if (!isWhatsapp) return;
+
+    event.preventDefault();
+
+    if (typeof fbq !== "undefined") {
+      fbq("track", "Lead", {
+        content_name: "Clique no WhatsApp",
+        origem: "landing_page"
+      });
+    }
+
+    setTimeout(function() {
+      window.location.href = href;
+    }, 800);
+  });
+  </script>
 </head>
 <body>
 
