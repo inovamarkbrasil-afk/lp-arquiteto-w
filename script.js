@@ -148,4 +148,15 @@
       if (!document.hidden && heroVideo.paused) startPlayback();
     });
   }
+
+  /* ----------------------------------------------------------------
+     6. META PIXEL — dispara evento Lead ao clicar em qualquer CTA WhatsApp
+  ---------------------------------------------------------------- */
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
+    if (!link) return;
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Lead');
+    }
+  }, { passive: true });
 })();
