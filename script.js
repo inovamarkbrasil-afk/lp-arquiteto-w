@@ -108,44 +108,4 @@
     });
   }
 
-  /* ----------------------------------------------------------------
-     5. VÍDEO HERO — autoplay + loop infinito garantido no background
-  ---------------------------------------------------------------- */
-  const heroVideo = document.querySelector('.hero-video');
-  if (heroVideo) {
-    // Reforça atributos exigidos para autoplay silencioso em background
-    heroVideo.muted = true;
-    heroVideo.loop = true;
-    heroVideo.setAttribute('muted', '');
-    heroVideo.setAttribute('playsinline', '');
-
-    // Reprodução mais lenta — efeito cinematográfico no background
-    const PLAYBACK_RATE = 0.7;
-    heroVideo.playbackRate = PLAYBACK_RATE;
-    heroVideo.addEventListener('loadedmetadata', () => {
-      heroVideo.playbackRate = PLAYBACK_RATE;
-    });
-
-    const startPlayback = () => {
-      const tryPlay = heroVideo.play();
-      if (tryPlay && typeof tryPlay.catch === 'function') {
-        tryPlay.catch(() => {
-          // Autoplay bloqueado: o poster permanece como background estático.
-        });
-      }
-    };
-
-    startPlayback();
-
-    // Fallback de loop: alguns navegadores/encodings ignoram o atributo `loop`.
-    heroVideo.addEventListener('ended', () => {
-      heroVideo.currentTime = 0;
-      startPlayback();
-    });
-
-    // Retoma o vídeo ao voltar para a aba (browsers pausam ao perder foco).
-    document.addEventListener('visibilitychange', () => {
-      if (!document.hidden && heroVideo.paused) startPlayback();
-    });
-  }
 })();

@@ -10,21 +10,6 @@
 /* Inter mantida como fallback de corpo */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
-/* Basier Circle — usar se o arquivo estiver disponível na pasta /fonts.
-   Caso contrário, o fallback "DM Serif Display" / Georgia assume.
-@font-face {
-  font-family: "Basier Circle";
-  src: url("fonts/BasierCircle-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Basier Circle";
-  src: url("fonts/BasierCircle-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-display: swap;
-}
-*/
 
 /* ----------------------------- TOKENS ----------------------------- */
 :root {
@@ -247,7 +232,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   padding: 120px var(--pad-x) 100px;
   overflow: hidden;
 }
-.hero-video,
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -554,12 +538,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   inset: 12px;
   border: 1px solid rgba(200, 169, 126, 0.25);
   pointer-events: none;
-}
-.about-photo-label {
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
 }
 
 /* --------------------------- CTA FINAL ---------------------------- */
