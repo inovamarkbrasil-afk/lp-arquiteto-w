@@ -55,18 +55,16 @@
 
     if (!isWhatsapp) return;
 
-    event.preventDefault();
-
+    // Não usar preventDefault + setTimeout aqui: o link já tem target="_blank"
+    // e isso bloqueava a abertura da nova aba em boa parte dos navegadores mobile.
+    // fbq() é assíncrono (sendBeacon/XHR) e não precisa de atraso para disparar
+    // antes da navegação — deixamos o clique nativo seguir normalmente.
     if (typeof fbq !== "undefined") {
       fbq("track", "Lead", {
         content_name: "Clique no WhatsApp",
         origem: "landing_page"
       });
     }
-
-    setTimeout(function() {
-      window.location.href = href;
-    }, 800);
   });
   </script>
 </head>
